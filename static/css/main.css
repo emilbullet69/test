@@ -29,3 +29,25 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 30px;
 	color: #555555;
 }
+#FormControlSelect {
+	width: 50%;
+	height: 26px;
+	padding: 5px 4px;
+}
+.form-control-plaintext {
+	border-radius: 4px;
+	border: 1px solid #cccccc;
+	padding-left: 4px;
+	padding-top: 4px; 
+}
+.col-form-label {
+	text-align: right;
+	margin-top: 4px;
+}
+#FormControlTextarea {
+	width: 176px;
+	height: 106px;
+}
+#submitFooter {
+	background-color: #f0e8e8
+}
