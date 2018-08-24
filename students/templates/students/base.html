@@ -1,4 +1,6 @@
 {% load static from staticfiles %}
+{% url "groups" as groups_url %}
+{% url "home" as home_url %}
 
 <!DOCTYPE html>
 <html lang="uk">
@@ -10,7 +12,7 @@
 
 		<!-- Include Styles -->
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+		<link rel="stylesheet" type="text/css" href="{{ PORTAL_URL }}{% static "css/main.css" %}">
 
 		{% block extra_css %}{% endblock extra_css %}
 
@@ -44,21 +46,15 @@
 			<div class="row" id="sub-header">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs" role="tablist">
-						{% block home_active %}
-						<li role="presentation" class="active">
+						<li role="presentation" {% if request.path == home_url %}class="active"{% endif %}>
 							<a href="{% url "home" %}">Студенти</a>
 						</li>
-						{% endblock home_active %}
-						{% block journal_active %}
-						<li role="presentation">
+						<li role="presentation" {% if '/journal' in request.path %}class="active"{% endif %}>
 							<a href="/journal">Відвідування</a>
 						</li>
-						{% endblock journal_active %}
-						{% block groups_active %}
-						<li role="presentation">
+						<li role="presentation" {% if groups_url in request.path %}class="active"{% endif %}>
 							<a href="{% url "groups" %}">Групи</a>
 						</li>
-						{% endblock groups_active %}
 					</ul>
 				</div>
 			</div>
@@ -69,7 +65,7 @@
 				
 				<div class="col-xs-12" id="content-column">
 					
-					{% comment ”Not used alert so far” %}
+					{% comment "Not used alert so far" %}
 					<!-- Status Message -->
 					<div class="alert alert-warning" role="alert">Зміни скасовано.</div>
 					
