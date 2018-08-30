@@ -1,0 +1,91 @@
+{% extends "students/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block meta_title %}Відвідування{% endblock meta_title %}
+
+{% block title %}Облік Відвідування{% endblock title %}
+
+{% block content %}
+<!-- Start Visit Listing -->
+<h5 align="center"><a href="#" style="font-size: 20px;">&larr;</a>Жовтень 2018<a href="#" style="font-size: 20px;">&rarr;</a></h5>	
+	<table class="table table-bordered table-striped" id="visit_table">
+	  <thead>
+	    <tr>
+	      <th scope="col">№</th>
+	      <th scope="col">Студент</th>
+	      <th scope="col">Ср<br>1</th>
+	      <th scope="col">Чт<br>2</th>
+	      <th scope="col">Пт<br>3</th>
+	      <th scope="col">Сб<br>4</th>
+	      <th scope="col">Нд<br>5</th>
+	      <th scope="col">Пн<br>6</th>
+	      <th scope="col">Вт<br>7</th>
+	      <th scope="col">Ср<br>8</th>
+	      <th scope="col">Чт<br>9</th>
+	      <th scope="col">Пт<br>10</th>
+	      <th scope="col">Сб<br>11</th>
+	      <th scope="col">Нд<br>12</th>
+	      <th scope="col">Пн<br>13</th>
+	      <th scope="col">Вт<br>14</th>
+	      <th scope="col">Ср<br>15</th>
+	      <th scope="col">Чт<br>16</th>
+	      <th scope="col">Пт<br>17</th>
+	      <th scope="col">Сб<br>18</th>
+	      <th scope="col">Нд<br>19</th>
+	      <th scope="col">Пн<br>20</th>
+	      <th scope="col">Вт<br>21</th>
+	      <th scope="col">Ср<br>22</th>
+	      <th scope="col">Чт<br>23</th>
+	      <th scope="col">Пт<br>24</th>
+	      <th scope="col">Сб<br>25</th>
+	      <th scope="col">Нд<br>26</th>
+	      <th scope="col">Пн<br>27</th>
+	      <th scope="col">Вт<br>28</th>
+	      <th scope="col">Ср<br>29</th>
+	      <th scope="col">Чт<br>30</th>
+	      <th scope="col">Пт<br>31</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    {% for student in journal %}
+	    <tr>
+	      <td>{{ forloop.counter }}</td>
+	      <td>{{ student.name }}</td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name="" checked=""></td>
+	      <td><input type="checkbox" name="" checked=""></td>
+	      <td><input type="checkbox" name="" checked=""></td>
+	      <td><input type="checkbox" name="" checked=""></td>
+	      <td><input type="checkbox" name="" checked=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name="" checked=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	      <td><input type="checkbox" name=""></td>
+	    </tr>
+	    {% endfor %}
+	  </tbody>
+	</table>
+<!-- End Visit Listing -->
+{% endblock content %}
