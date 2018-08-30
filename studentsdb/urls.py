@@ -35,3 +35,12 @@ urlpatterns = [
 
 	url(r'^admin/', include(admin.site.urls)),
 ]
+
+from .settings import MEDIA_ROOT, DEBUG
+from django.views.static import serve
+
+if DEBUG:
+	# serve files from media folder
+	urlpatterns += [
+		url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
+	] 

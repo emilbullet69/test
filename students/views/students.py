@@ -5,26 +5,12 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+from ..models import Student
+
 #Views for Students
 
 def students_list(request):
-	students = (
-	{'id': 1,
-	'first_name': u'Віталій',
-	'last_name': u'Подоба',
-	'ticket': 235,
-	'image': 'img/flint.jpg'},
-	{'id': 2,
-	'first_name': u'Андрій',
-	'last_name': u'Корост',
-	'ticket': 2123,
-	'image': 'img/charlz.jpg'},
-	{'id': 3,
-	'first_name': u'Елеонор',
-	'last_name': u'Гатрі',
-	'ticket': 264,
-	'image': 'img/eleonor.jpg'},
-	)
+	students = Student.objects.all()
 	header_groups = (
 	{'group': u'МтМ - 21',
 	'leader': u'Подоба Віталій',
