@@ -1,3 +1,4 @@
+<!-- Students list pagination -->
 {% if students.has_other_pages %}
 {% with order_by=request.GET.order_by reverse=request.GET.reverse %}
 <nav>
@@ -11,3 +12,20 @@
 </nav>
 {% endwith %}
 {% endif %}
+<!-- End Students list pagination -->
+
+<!-- Groups list pagination -->
+{% if groups.has_other_pages %}
+{% with order_by=request.GET.order_by reverse=request.GET.reverse %}
+<nav>
+	<ul class="pagination">
+		<li><a href="{% url "groups" %}?page=1{% if order_by %}&amp;order_by={{ order_by }}{% endif %}{% if reverse %}&amp;reverse={{ reverse }}{% endif %}">&laquo;</a></li>
+		{% for p in groups.paginator.page_range %}
+		<li {% if groups.number == p %}class="active"{% endif %}><a href="{% url "groups" %}?page={{ p }}{% if order_by %}&amp;order_by={{ order_by }}{% endif %}{% if reverse %}&amp;reverse={{ reverse }}{% endif %}">{{ p }}</a></li>
+		{% endfor %}
+		<li><a href="{% url "groups" %}?page={{ groups.paginator.num_pages}}{% if order_by %}&amp;order_by={{ order_by }}{% endif %}{% if reverse %}&amp;reverse={{ reverse }}{% endif %}">&raquo;</a></li>
+	</ul>
+</nav>
+{% endwith %}
+{% endif %}
+<!-- End Groups list pagination -->

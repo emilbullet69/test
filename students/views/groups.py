@@ -5,20 +5,15 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
+from ..models import Group
+
 #Views for Groups
 
 def groups_list(request):
-	groups = (
-	{'id': 1,
-	'group_name': u'Мтм-21',
-	'group_leader': u'Ячменєв Олег'},
-	{'id': 2,
-	'group_name': u'Мтм-22',
-	'group_leader': u'Віталій Подоба'},
-	{'id': 3,
-	'group_name': u'Мтм-23',
-	'group_leader': u'Іванов Андрій'},
-	)
+	groups = Group.objects.all().order_by('title')
+	
 	header_groups = (
 	{'group': u'МтМ - 21',
 	'leader': u'Подоба Віталій',
@@ -27,6 +22,28 @@ def groups_list(request):
 	'leader': u'Корост Андрій',
 	'leader_ticket': 2123},
 	)
+
+	# try to order groups list
+	order_by = request.GET.get('order_by', '')
+	if order_by in ('title', 'leader__first_name', 'id'):
+		groups = groups.order_by(order_by)
+		if request.GET.get('reverse', '') == '1':
+			groups = groups.reverse()
+	elif request.GET.get('reverse', '') == '1':
+		groups = groups.reverse()
+
+	# Paginate groups
+	paginator = Paginator(groups, 3)
+	page = request.GET.get('page')
+	try:
+		groups = paginator.page(page)
+	except PageNotAnInteger:
+		# If page is not an integer, deliver first page.
+		groups = paginator.page(1)
+	except EmptyPage:
+		# If page is out of range (e.g. 9999), deliver last page of results.
+		groups = paginator.page(paginator.num_pages)
+
 	return render(request, 'students/groups_list.html', {'groups': groups, 'GROUPS': header_groups})
 
 def groups_add(request):
