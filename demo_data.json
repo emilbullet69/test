@@ -1,0 +1,205 @@
+[
+{
+    "model": "students.group",
+    "pk": 7,
+    "fields": {
+        "title": "\u0423\u0456\u0431-14",
+        "leader": 10,
+        "notes": ""
+    }
+},
+{
+    "model": "students.group",
+    "pk": 6,
+    "fields": {
+        "title": "\u0423\u0456\u0431-13",
+        "leader": 9,
+        "notes": ""
+    }
+},
+{
+    "model": "students.group",
+    "pk": 3,
+    "fields": {
+        "title": "\u041c\u0442\u043c-23",
+        "leader": 5,
+        "notes": ""
+    }
+},
+{
+    "model": "students.group",
+    "pk": 2,
+    "fields": {
+        "title": "\u041c\u0442\u043c-22",
+        "leader": 4,
+        "notes": ""
+    }
+},
+{
+    "model": "students.group",
+    "pk": 5,
+    "fields": {
+        "title": "\u0423\u0456\u0431-12",
+        "leader": 3,
+        "notes": ""
+    }
+},
+{
+    "model": "students.group",
+    "pk": 4,
+    "fields": {
+        "title": "\u0423\u0456\u0431-11",
+        "leader": 2,
+        "notes": ""
+    }
+},
+{
+    "model": "students.group",
+    "pk": 1,
+    "fields": {
+        "title": "\u041c\u0442\u043c-21",
+        "leader": 1,
+        "notes": ""
+    }
+},
+{
+    "model": "students.student",
+    "pk": 10,
+    "fields": {
+        "first_name": "Adam",
+        "last_name": "Sandler",
+        "middle_name": "",
+        "birthday": "2018-09-01",
+        "photo": "",
+        "ticket": "666",
+        "student_group": 7,
+        "notes": ""
+    }
+},
+{
+    "model": "students.student",
+    "pk": 9,
+    "fields": {
+        "first_name": "Rick",
+        "last_name": "Morty",
+        "middle_name": "",
+        "birthday": "2018-09-01",
+        "photo": "",
+        "ticket": "888",
+        "student_group": 6,
+        "notes": ""
+    }
+},
+{
+    "model": "students.student",
+    "pk": 8,
+    "fields": {
+        "first_name": "Corvo",
+        "last_name": "Attano",
+        "middle_name": "",
+        "birthday": "2018-09-01",
+        "photo": "",
+        "ticket": "299",
+        "student_group": 4,
+        "notes": ""
+    }
+},
+{
+    "model": "students.student",
+    "pk": 7,
+    "fields": {
+        "first_name": "James",
+        "last_name": "Bond",
+        "middle_name": "",
+        "birthday": "2018-09-01",
+        "photo": "",
+        "ticket": "444",
+        "student_group": 5,
+        "notes": ""
+    }
+},
+{
+    "model": "students.student",
+    "pk": 6,
+    "fields": {
+        "first_name": "Bruce",
+        "last_name": "Lee",
+        "middle_name": "",
+        "birthday": "2018-09-01",
+        "photo": "",
+        "ticket": "112",
+        "student_group": 4,
+        "notes": ""
+    }
+},
+{
+    "model": "students.student",
+    "pk": 5,
+    "fields": {
+        "first_name": "Eleonor",
+        "last_name": "Gatry",
+        "middle_name": "",
+        "birthday": "2018-08-31",
+        "photo": "eleonor_2iJ3ZLn.jpg",
+        "ticket": "346",
+        "student_group": 3,
+        "notes": ""
+    }
+},
+{
+    "model": "students.student",
+    "pk": 4,
+    "fields": {
+        "first_name": "Flint",
+        "last_name": "Captain",
+        "middle_name": "",
+        "birthday": "2018-08-31",
+        "photo": "flint_L7ePJn3.jpg",
+        "ticket": "777",
+        "student_group": 2,
+        "notes": ""
+    }
+},
+{
+    "model": "students.student",
+    "pk": 3,
+    "fields": {
+        "first_name": "Juriy",
+        "last_name": "Kit",
+        "middle_name": "",
+        "birthday": "2018-08-31",
+        "photo": "charlz_dIcThRJ.jpg",
+        "ticket": "566",
+        "student_group": 5,
+        "notes": ""
+    }
+},
+{
+    "model": "students.student",
+    "pk": 2,
+    "fields": {
+        "first_name": "Emil",
+        "last_name": "Rozgonyi",
+        "middle_name": "",
+        "birthday": "2018-08-31",
+        "photo": "ant_H8Cs5HD.jpg",
+        "ticket": "185",
+        "student_group": 4,
+        "notes": ""
+    }
+},
+{
+    "model": "students.student",
+    "pk": 1,
+    "fields": {
+        "first_name": "Vitaliy",
+        "last_name": "Podoba",
+        "middle_name": "",
+        "birthday": "2018-08-31",
+        "photo": "",
+        "ticket": "235",
+        "student_group": 1,
+        "notes": ""
+    }
+}
+]

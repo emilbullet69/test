@@ -12,7 +12,7 @@ from ..models import Group
 #Views for Groups
 
 def groups_list(request):
-	groups = Group.objects.all().order_by('title')
+	groups = Group.objects.all().order_by('id')
 	
 	header_groups = (
 	{'group': u'МтМ - 21',
